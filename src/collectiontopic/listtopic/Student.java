@@ -1,5 +1,6 @@
 package collectiontopic.listtopic;
 
+import java.util.Scanner;
 
 public class Student 
 {
@@ -20,4 +21,24 @@ public class Student
 	{
 		System.out.println(rno + " "+name + " "+ std);
 	}
+	public void scan() 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Rno : ");
+		rno = sc.nextInt();
+		sc.nextLine();
+		System.out.println("Enter Name : ");
+		name = sc.nextLine();
+		System.out.println("Enter std : ");
+		std = sc.nextInt();
+	}
+	public void update() 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Name : ");
+		name = sc.nextLine();
+		System.out.println("Enter std : ");
+		std = sc.nextInt();
+	}
+
 }
