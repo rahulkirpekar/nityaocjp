@@ -1,6 +1,7 @@
 package collectiontopic.listtopic;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.ListIterator;
 
 public class TestApp3 
@@ -14,7 +15,6 @@ public class TestApp3
 		mainList.add("rakesh");//2
 		mainList.add("sagar"); //3
 		mainList.add("kunal"); //4
-
 		
 		ListIterator<String> itr =	mainList.listIterator();
 		
@@ -23,12 +23,23 @@ public class TestApp3
 			String name = itr.next();
 			System.out.println(name);
 		}
-		System.out.println("--------------------");
-		while(itr.hasPrevious()) 
+		Collections.sort(mainList);
+		
+		System.out.println("After Sorting : ");
+		itr =	mainList.listIterator();
+		
+		while(itr.hasNext()) 
 		{
-			String name = itr.previous();
+			String name = itr.next();
 			System.out.println(name);
 		}
+		
+//		System.out.println("--------------------");
+//		while(itr.hasPrevious()) 
+//		{
+//			String name = itr.previous();
+//			System.out.println(name);
+//		}
 		
 //		System.out.println("mainList.isEmpty() : " + mainList.isEmpty());
 		
